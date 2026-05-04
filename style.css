@@ -1,0 +1,200 @@
+/* استدعاء الخطوط */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Ubuntu:wght@400;700&display=swap');
+
+*{
+    font-family: 'Ubuntu', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(to right,#5f013b85,#000000);
+    min-height: 100vh; /* تم التغيير لـ min-height لكي يسمح بالتمرير لأسفل */
+    display: block; /* تم التغيير من flex لكي تظهر الأقسام تحت بعضها */
+}
+
+/* القسم الرئيسي (الهيرو) */
+.container{
+    background-image: linear-gradient(to right, #86035f80,#0000007e), url(imge.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 90%;
+    height: 90vh;
+    margin: 20px auto; /* توسيط الحاوية */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif; /* تصحيح الكلمة من front إلى font */
+    font-size: 1.5rem;
+}
+
+nav a {
+    color:white;
+    text-decoration:none;
+    margin-right: 20px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffb6c1;
+}
+
+.hero-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 80px;
+}
+
+.main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 6rem;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.quote {
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    opacity: 0.9;
+    border-left: 3px solid #86035f;
+    padding-left: 15px;
+}
+
+/* تنسيق أقسام المنتجات */
+.skincare-section, .makeup-section {
+    display: block; /* اجعليها block لكي تظهر الكروت */
+    min-height: 100vh;
+    width: 100%;
+    padding: 80px 5%;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #5f013b;
+    margin-bottom: 50px;
+}
+
+/* شبكة الكروت */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+
+.card-img-top {
+    width: 100%;
+    height: 280px; 
+    object-fit: cover; 
+}
+
+.card-body {
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.btn-buy {
+    display: block;
+    background-color: #5f013b;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.btn-buy:hover {
+    background-color: #86035f;
+}
+
+
+@media (max-width: 992px) {
+    .cards-container { grid-template-columns: repeat(2, 1fr); }
+    .main-title { font-size: 4rem; }
+}
+
+@media (max-width: 600px) {
+    .cards-container { grid-template-columns: repeat(1, 1fr); }
+    .hero-content { padding-left: 30px; }
+    .main-title { font-size: 3rem; }
+}
+
+
+.about-section {
+    background-color: #ffffff;
+    padding: 80px 10%;        
+    width: 100%;
+    text-align: center;       
+    display: block;            
+}
+
+.about-content {
+    max-width: 900px;         
+    margin: 0 auto;            
+}
+
+.about-text {
+    color: #333333 !important; 
+    font-size: 1.2rem;
+    line-height: 1.8;          
+    margin-top: 20px;
+}
+
+
+.about-text strong {
+    color: #5f013b;
+    font-size: 1.4rem;
+}
+
+   
+    
+    
+    
+   
+
+
+    
